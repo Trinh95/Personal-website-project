@@ -1,0 +1,121 @@
+:root {
+  --main-color: #ff3757;
+  --sub-color: #ff715a;
+  --shadow: 5px 5px 10px #faa2b0;
+}
+body {
+  padding: 3% 10%;
+  line-height: 1.5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+}
+h1 {
+  color: var(--main-color);
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+h2,
+h3 {
+  color: var(--sub-color);
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 20px;
+}
+
+.homepage {
+  color: var(--sub-color);
+}
+
+.about-me-button {
+  background: var(--main-color);
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+  margin-right: 20px;
+  width: 120px;
+}
+
+.about-me-button:hover {
+  opacity: 0.8;
+  color: white;
+  transition: 200ms;
+  text-decoration: none;
+}
+
+.contact-me-button {
+  border: 1px solid var(--main-color);
+  background: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  color: var(--main-color);
+  font-size: 15px;
+  padding: 15px;
+  width: 120px;
+}
+
+.contact-me-button:hover {
+  background: var(--main-color);
+  color: white;
+  transition: 200ms;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.about-me {
+  max-width: 90%;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.contact-me {
+  text-align: center;
+}
+
+.my-background {
+  max-width: 90%;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.my-competences {
+  justify-content: space-around;
+  flex: 1;
+}
+
+.my-competences ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.language,
+.working-skills,
+.working-experiences {
+  border: 1px solid #ff715a;
+  border-radius: 5px;
+  max-width: 250px;
+  display: block;
+  line-height: 1.5;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.title-language,
+.title-working-skills,
+.title-experiences {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-color);
+}
