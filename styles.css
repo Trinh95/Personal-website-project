@@ -4,47 +4,61 @@
   --shadow: 5px 5px 10px #faa2b0;
 }
 body {
-  padding: 3% 10%;
-  line-height: 1.5;
+  line-height: 1.25;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: larger;
 }
 h1 {
   color: var(--main-color);
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   padding: 20px;
+}
+
+h1 strong {
+  font-size: 100px;
 }
 
 h2,
 h3 {
   color: var(--sub-color);
   font-size: 30px;
-  line-height: 1.5;
   text-align: center;
-  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-left: 50px;
+  margin-right: 40px;
+  font-size: 25px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .homepage {
   color: var(--sub-color);
 }
 
-.about-me-button {
+.buttons-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.main-button {
   background: var(--main-color);
-  border: 1px solid white;
+  border: 1px solid var(--main-color);
   border-radius: 15px;
   box-shadow: var(--shadow);
   color: white;
-  font-size: 15px;
-  padding: 15px;
   margin-right: 20px;
-  width: 120px;
 }
 
-.about-me-button:hover {
+.main-button:hover {
   opacity: 0.8;
-  color: white;
-  transition: 200ms;
+  color: var(--sub-color);
+  transition: 100ms;
   text-decoration: none;
 }
 
@@ -54,9 +68,7 @@ h3 {
   border-radius: 15px;
   box-shadow: var(--shadow);
   color: var(--main-color);
-  font-size: 15px;
-  padding: 15px;
-  width: 120px;
+  text-decoration: center;
 }
 
 .contact-me-button:hover {
@@ -76,8 +88,11 @@ a:hover {
 
 .about-me {
   max-width: 90%;
-  line-height: 1.5;
   text-align: justify;
+}
+
+.container {
+  padding: 20px 10%;
 }
 
 .contact-me {
@@ -86,7 +101,6 @@ a:hover {
 
 .my-background {
   max-width: 90%;
-  line-height: 1.5;
   text-align: justify;
 }
 
@@ -107,7 +121,6 @@ a:hover {
   border-radius: 5px;
   max-width: 250px;
   display: block;
-  line-height: 1.5;
   padding-top: 10px;
   text-align: center;
 }
@@ -118,4 +131,17 @@ a:hover {
   font-size: 18px;
   font-weight: bold;
   color: var(--main-color);
+}
+
+p {
+  text-align: justify;
+}
+
+@media (max-width: 720px) {
+  h1 strong {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 25px;
+  }
 }
