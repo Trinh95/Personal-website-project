@@ -1,30 +1,82 @@
 :root {
-  --main-color: #ff3757;
+  --main-color: rgb(252, 69, 2);
   --sub-color: #ff715a;
-  --shadow: 5px 5px 10px #faa2b0;
+  --shadow: 5px 5px 5px #f9c7bf;
+  --head-font-family: "Playfair Display", serif;
+  --main-font-family: "Quicksand", sans-serif;
 }
+
 body {
-  line-height: 1.25;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: larger;
+  line-height: 1.5;
 }
 h1 {
   color: var(--main-color);
-  font-size: 40px;
-  text-align: center;
-  padding: 20px;
+  font-size: 60px;
+  font-family: var(--head-font-family);
+  margin-top: 30px;
 }
 
-h1 strong {
-  font-size: 100px;
-}
-
-h2,
 h3 {
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: var(--head-font-family);
+  margin: 20px 0;
+}
+
+h4 {
   color: var(--sub-color);
-  font-size: 30px;
   text-align: center;
-  padding-bottom: 40px;
+  font-family: var(--main-font-family);
+  padding-bottom: 30px;
+}
+
+hr {
+  color: red;
+  padding-top: 30px;
+}
+
+footer {
+  color: #b9b9d1;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+}
+
+footer i {
+  font-size: 30px;
+  padding: 20px;
+  color: var(--sub-color);
+}
+.my-photo {
+  border: 4px double white;
+}
+.about-me-part {
+  margin-bottom: 50px;
+}
+.launch-button {
+  margin-top: 40px;
+}
+.button-area {
+  margin-top: 40px;
+}
+.thank-you {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.homepage {
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 194, 48) 11.2%,
+    rgb(255, 124, 0) 100.2%
+  );
+  font-family: var(--main-font-family);
+  padding: 20px auto;
 }
 
 .navbar-brand {
@@ -39,29 +91,41 @@ h3 {
 
 .homepage {
   color: var(--sub-color);
+  padding: 3% 10% 5% 20%;
 }
 
-.buttons-area {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+.me-button {
+  background: var(--main-color);
+  border-color: white;
+  color: white;
+  border: 3px double;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  font-weight: bolder;
+  text-decoration: center;
+  margin-top: 100px;
+  margin-right: 20px;
+  padding: 13px;
 }
-.about-me-button,
+
+.me-button:hover {
+  background: white;
+  border-color: var(--main-color);
+  color: var(--main-color);
+  transition: 200ms;
+  text-decoration: none;
+}
+
 .main-button {
   background: var(--main-color);
   border: 1px solid var(--main-color);
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: var(--shadow);
   color: white;
-  margin-right: 20px;
+  font-family: var(--main-font-family);
+  padding: 10px;
 }
 
-.about-me-button:hover {
-  opacity: 0.8;
-  color: var(--sub-color);
-  transition: 100ms;
-  text-decoration: none;
-}
 .main-button:hover {
   opacity: 0.8;
   color: var(--sub-color);
@@ -69,33 +133,25 @@ h3 {
   text-decoration: none;
 }
 
-.contact-me-button {
-  border: 1px solid var(--main-color);
-  background: white;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
-  color: var(--main-color);
-  text-decoration: center;
-}
-
-.contact-me-button:hover {
-  background: var(--main-color);
-  color: white;
-  transition: 200ms;
-  text-decoration: none;
-}
-
 a {
   text-decoration: none;
+}
+
+footer a {
+  color: var(--main-color);
 }
 
 a:hover {
   cursor: pointer;
 }
 
-.about-me {
-  max-width: 90%;
-  text-align: justify;
+.project-pic {
+  border: 3px double var(--sub-color);
+}
+
+.about-me,
+.my-background {
+  text-align: center;
 }
 
 .container {
@@ -104,11 +160,6 @@ a:hover {
 
 .contact-me {
   text-align: center;
-}
-
-.my-background {
-  max-width: 90%;
-  text-align: justify;
 }
 
 .my-competences {
@@ -128,8 +179,7 @@ a:hover {
   border-radius: 5px;
   max-width: 250px;
   display: block;
-  padding-top: 10px;
-  text-align: center;
+  padding-left: 30px;
 }
 
 .title-language,
@@ -138,26 +188,62 @@ a:hover {
   font-size: 18px;
   font-weight: bold;
   color: var(--main-color);
+  text-align: center;
+  padding: 15px 0 20px;
 }
-
-p {
-  text-align: justify;
+.weather-info {
+  text-align: right;
 }
-
-@media (max-width: 720px) {
-  h1 strong {
-    font-size: 60px;
+@media (max-width: 1000px) {
+  .homepage {
+    padding: 3%;
+    text-align: center;
   }
+  h1 {
+    font-size: 50px;
+  }
+
   h3 {
-    font-size: 25px;
+    font-size: 20px;
+  }
+
+  .button-area {
+    font-size: 10px;
+    margin-top: 10px;
   }
   .main-button {
     display: block;
     text-align: center;
     margin: 0;
   }
-  .my-works-images {
-    width: 400px;
-    margin: 0 auto;
+  .my-photo {
+    margin-top: 40px;
+  }
+  .my-photo img {
+    max-width: 60%;
+  }
+
+  .weather-pic {
+    order: 1;
+    margin-top: 0 !important;
+  }
+  .weather-info {
+    order: 2;
+  }
+  .launch-button {
+    margin-top: 20px;
+  }
+  .projects-info h2,
+  p {
+    text-align: center !important;
+  }
+  container {
+    padding: 5%;
+  }
+  .thank-you {
+    font-size: 15px;
+  }
+  .my-photo {
+    border: none;
   }
 }
