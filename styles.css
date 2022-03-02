@@ -31,7 +31,6 @@ h4 {
   color: var(--sub-color);
   text-align: center;
   font-family: var(--main-font-family);
-  padding-bottom: 30px;
 }
 
 hr {
@@ -98,7 +97,7 @@ footer i {
 }
 
 .me-button {
-  background: var(--main-color);
+  background: var(--sub-color);
   border-color: white;
   color: white;
   border: 3px double;
