@@ -58,16 +58,19 @@ footer i {
   border: 4px double white;
 }
 .about-me-part {
-  margin-bottom: 50px;
+  padding: 30px 60px 40px 80px;
 }
+
 .launch-button {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 .button-area {
   margin-top: 40px;
 }
 
-.homepage {
+.homepage,
+.header {
   background: linear-gradient(
     109.6deg,
     rgb(255, 194, 48) 11.2%,
@@ -76,6 +79,7 @@ footer i {
   font-family: var(--main-font-family);
   margin-top: 10px;
   padding: 20px auto;
+  box-shadow: 10px 10px 20px #f9c7bf;
 }
 
 .navbar-brand {
@@ -101,7 +105,6 @@ footer i {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  padding: 3px 10px;
   color: var(--main-color);
   cursor: pointer;
   border-radius: 20px;
@@ -193,14 +196,14 @@ a:hover {
 .about-me a {
   padding: 5px 10px;
   box-shadow: var(--shadow);
-  background: right;
+  background: var(--main-color);
   border: 2px solid var(--main-color);
+  color: white;
   border-radius: 10px;
   text-align: right;
 }
 .about-me a:hover {
-  background: var(--main-color);
-  color: white !important;
+  opacity: 0.7;
   text-decoration: none;
 }
 .project-pic {
@@ -208,7 +211,7 @@ a:hover {
 }
 
 .about-me,
-.my-background {
+.background {
   text-align: center;
 }
 
@@ -224,6 +227,14 @@ a:hover {
 .my-competences {
   justify-content: space-around;
   flex: 1;
+}
+
+.background:hover {
+  transform: scale(1.1);
+}
+.my-works img:hover {
+  transform: scale(1.1);
+  margin-bottom: 30px;
 }
 
 .my-competences ul {
@@ -274,6 +285,12 @@ a:hover {
 .thank-you {
   font-size: 20px;
   font-family: "Lobster", cursive;
+}
+
+.skills {
+  font-style: oblique;
+  font-family: "PT Mono", monospace;
+  color: var(--sub-color);
 }
 
 @media (max-width: 1000px) {
@@ -327,5 +344,8 @@ a:hover {
   }
   .my-photo {
     border: none;
+  }
+  .skills {
+    text-align: left;
   }
 }
