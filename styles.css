@@ -68,6 +68,21 @@ footer i {
 .button-area {
   margin-top: 40px;
 }
+.typewriter {
+  font-size: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 5s steps(50, end);
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 .homepage,
 .header {
